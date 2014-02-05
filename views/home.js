@@ -1,14 +1,13 @@
-AppNamespace.home = function(){
-    var viewModel ={
-        message: "Hello World!"
-        /*message: ko.observable('Welcome!'),
+AppNamespace.home = function () {
+    var viewModel = {
+        message: ko.observable('Welcome!'),
         name: ko.observable(''),
-        sayHello: function(){
+        sayHello: function () {
             this.message("Hello " + this.name() + '!');
         },
-        viewMain: function(){
-            AppNamespace.app.navigate("main");
-        }*/
+        greet: function () {
+            AppNamespace.app.navigate("greeting/" + this.name());
+        }
     };
     return viewModel;
-}
+};
