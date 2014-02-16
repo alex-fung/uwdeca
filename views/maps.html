@@ -1,7 +1,11 @@
 <div data-options="dxView: {name: 'maps', title: 'Maps'}">
     <div data-options="dxContent: {targetPlaceholder: 'content'}">
     	<div class="main">
-    		
+    		<div id="navBarContainer" data-bind="dxNavBar:{dataSource: navItems, itemClickAction: navItemClicked, selectedIndex: 0}">
+    		</div>
+    		<div id="map" data-bind="dxMap:{location:[43.470736, -80.542363], zoom: 15}"></div>
+			<div id="contents" data-bind="html: details">
+			</div>
     	</div>
     </div>
 </div>
