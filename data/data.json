@@ -1,0 +1,7 @@
+[
+  { "name": "Shahmeer Navid", "workshop": "10:30am", "case1": "3:00pm", "case2": "5:00pm", "id":"1"},
+  { "name": "Anni Dong", "workshop": "12:30am", "case1": "1:00pm", "case2": "5:00pm", "id":"2"},
+  { "name": "Flora Zhang", "workshop": "12:30am", "case1": "5:00pm", "case2": "4:00pm", "id":"3"},
+  { "name": "Alexander Fung", "workshop": "10:30am", "case1": "2:00pm", "case2": "9:00pm", "id":"4"}
+
+]

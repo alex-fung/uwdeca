@@ -1,0 +1,31 @@
+<div data-options="dxView: {name: 'schedule', title: 'Schedule'}">
+  <div data-options="dxContent: {targetPlaceholder: 'content'}">
+  	
+		<div class="main">
+			<div class="dx-field-value main-search" data-bind="dxTextBox: { mode: 'search', maxLength: length, placeholder: lengthDescription, enterKeyAction: test, value: text}"></div>  
+
+
+			<div id="delegate-list" style="margin: 10px;" data-bind="dxList: { dataSource: listDataSource, grouped: false, noDataText: 'No Results Found', itemClickAction: navigateToDelegate}">
+				<div class="listItem" data-options="dxTemplate:{ name:'item' }">
+			  		
+				    <div style="display:inline-block; margin: 5px;">
+				    	<p style="font-size:larger;"><b data-bind="text: name"></b></p>
+				    </div>
+			  	</div>
+			</div>
+		  
+		  
+		  <!--slideOut doesn't work yet-->
+		  <!-- <div id="slideOut" data-bind="dxSlideOut:{dataSource: items, selectedIndex: selectedIndex}"></div> -->
+
+		</div>	
+
+		<div id="networkError" data-bind="dxOverlay: { visible: error.network }">
+		  <div class="overlayContents">
+		      <p>There was a network error. Please check your internet connection and relaunch the app.</p>
+		      <div class="button" data-bind="dxButton: { text: 'Okie Dokie', clickAction: hideError('network') }"></div>
+		  </div>
+		</div>
+  </div>
+
+</div>

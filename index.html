@@ -29,28 +29,27 @@
                                     title: "Maps",
                                     action: "#maps",
                                     icon: "Maps" 
+                                },
+                                {
+                                    title: "Schedule",
+                                    action: "#schedule",
+                                    icon: "Schedule" 
                                 }
                             ],
                             navigationType: 'slideout'
                         }
                     );
-                    AppNamespace.app.router.register(":view", { view: "main" });
+                    AppNamespace.app.router.register(":view/:delegate", { view: "main", delegate: undefined });
                     AppNamespace.app.navigate();
                 });
             </script>
             <!--     
             <script type="text/javascript" src="js/localization/dx.phonejs.ja.js"></script>
             -->
-            
+            <link rel="stylesheet" type="text/css" href="index.css"/>
             <link rel="stylesheet" type="text/css" href="css/dx.common.css" />
-            <link rel="stylesheet" type="text/css" href="css/dx.ios.default.css" />
-            <link rel="stylesheet" type="text/css" href="css/dx.android.holo-dark.css" />
-            <!--link rel="stylesheet" type="text/css" href="css/dx.android.holo-light.css" /-->
-            <link rel="stylesheet" type="text/css" href="css/dx.win8.black.css" />
-            <!--link rel="stylesheet" type="text/css" href="css/dx.win8.white.css" /-->
-            <link rel="stylesheet" type="text/css" href="css/dx.tizen.white.css" />
-            <!--link rel="stylesheet" type="text/css" href="css/dx.tizen.black.css" /-->
             <link rel="stylesheet" type="text/css" href="css/dx.generic.light.css" />
+            
 
             <!-- App -->
             <!--<link rel="stylesheet" type="text/css" href="index.css" />
@@ -67,20 +66,28 @@
 
             <!-- App views -->
             <link rel="dx-template" type="text/html" href="views/home.html"/>
-            <link rel="stylesheet" type="text/css" href="views/home.css"/>
+            <!-- <link rel="stylesheet" type="text/css" href="views/home.css"/> -->
             <script type="text/javascript" src="views/home.js"></script>
             
             <link rel="dx-template" type="text/html" href="views/main.html"/>
-            <link rel="stylesheet" type="text/css" href="views/main.css"/>
+            <!-- <link rel="stylesheet" type="text/css" href="views/main.css"/> -->
             <script type="text/javascript" src="views/main.js"></script>
 
             <link rel="dx-template" type="text/html" href="views/maps.html"/>
-            <link rel="stylesheet" type="text/css" href="views/maps.css"/>
+           <!--  <link rel="stylesheet" type="text/css" href="views/maps.css"/> -->
             <script type="text/javascript" src="views/maps.js"></script>
 
+            <link rel="dx-template" type="text/html" href="views/schedule.html"/>
+           <!--  <link rel="stylesheet" type="text/css" href="views/schedule.css"/> -->
+            <script type="text/javascript" src="views/schedule.js"></script>
+
             <link rel="dx-template" type="text/html" href="views/workshops.html"/>
-            <link rel="stylesheet" type="text/css" href="views/workshops.css"/>
+            <!-- <link rel="stylesheet" type="text/css" href="views/workshops.css"/> -->
             <script type="text/javascript" src="views/workshops.js"></script>
+
+            <link rel="dx-template" type="text/html" href="views/delegate.html"/>
+            <!-- <link rel="stylesheet" type="text/css" href="views/delegate.css"/> -->
+            <script type="text/javascript" src="views/delegate.js"></script>
         </head>
         <body>
             <div class="dx-viewport"></div>
