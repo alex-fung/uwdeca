@@ -1,4 +1,5 @@
 var x = new DevExpress.data.DataSource([]);
+var delegateListVisible = ko.observable(false);
 
 //function returns string that search api will look into
 //could put into variable declaration but cleaner this way
@@ -11,7 +12,7 @@ $.ajax({
         dataType: "json",
         async: false,
         error: function(jqXHR, textStatus, errorThrown){
-
+            showError("Network Error");
         }
         
 
@@ -27,13 +28,12 @@ $.ajax({
                     //});
         });
 
-x.searchValue("");
-x.load();
-
 
 function search(query){
     x.searchValue(query);
-    x.load();
+    x.load().done(function(){
+        delegateListVisible(true);
+    });
 }
 
 AppNamespace.schedule = function(){
@@ -48,17 +48,9 @@ AppNamespace.schedule = function(){
         navigateToDelegate: function(e){
             //console.log(e.itemData);
             AppNamespace.app.navigate("delegate/" + e.itemData.id);
-            //viewModel.showError('network');
+            //showError('Network Error');
         },
-        error: {
-            'network': ko.observable(false)
-        },
-        showError: function(errorName){
-            viewModel.error[errorName](true);
-        },
-        hideError: function(errorName){
-            viewModel.error[errorName](false);
-        }
+        showList: delegateListVisible
 
     };
 

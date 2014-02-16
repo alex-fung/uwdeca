@@ -9,6 +9,16 @@
             <script type="text/javascript" src="js/globalize.min.js"></script>
             <script type="text/javascript" src="js/dx.phonejs.js"></script>
             <script type="text/javascript">
+                //error handeling
+
+                var error = {
+                    'Network Error': "There was a network error. Please check your internet connection and reluanch the app."
+                };
+                
+                function showError(errorName){
+                    DevExpress.ui.dialog.alert(error[errorName], errorName);
+                }
+
                 window.AppNamespace = {};
                 $(function () {
                     DevExpress.devices.current({
@@ -94,7 +104,11 @@
             <script type="text/javascript" src="views/delegate.js"></script>
         </head>
         <body>
+
+            
+
             <div class="dx-viewport"></div>
+
 <!-- 
             <script type="text/javascript">
                 $(document).ready(function (){

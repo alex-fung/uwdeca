@@ -3,7 +3,16 @@ function getDelegateByID    (query){
     var delegate = undefined;
 
     //needs to be synchronous request
-    $.ajax({url: "data/data.json", async: false, dataType: "json"}).done(function (data) {   
+    $.ajax({ 
+        url:"data/data.json", 
+        dataType: "json",
+        async: false,
+        error: function(jqXHR, textStatus, errorThrown){
+            showError("Network Error");
+        }
+        
+
+        }).done(function (data) {   
         for (var i = 0; i < data.length; i++) {
             //console.log(query === data[i].id);
             if(data[i].id === query){  //always use 3 equals
