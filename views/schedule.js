@@ -1,5 +1,8 @@
 var x = new DevExpress.data.DataSource([]);
 var delegateListVisible = ko.observable(false);
+var passwordDialog = ko.observable(false);
+var selectedDelegate = undefined;
+var email = ko.observable("");
 
 //function returns string that search api will look into
 //could put into variable declaration but cleaner this way
@@ -36,20 +39,38 @@ function search(query){
     });
 }
 
+function showPasswordDialog(e){
+    passwordDialog(true);
+    selectedDelegate = e.itemData;
+}
+
+function hidePasswordDialog(){
+    passwordDialog(false);
+    selectedDelegate = undefined;
+}
+
+function navigateToDelegate(){
+    console.log(selectedDelegate);
+    if(email() === selectedDelegate.email){
+        AppNamespace.app.navigate("delegate/" + selectedDelegate.id);
+        selectedDelegate = undefined;
+    }
+    else{
+        DevExpress.ui.notify('Incorrect Email', 'error', 3000);
+    }
+    email("");
+
+}
+
+
 AppNamespace.schedule = function(){
     var viewModel = {
-        length: 10,
-        lengthDescription: "Enter your name...",
+        lengthDescription: "Enter your email address...",
         text: ko.observable(""),
         test: function(){
             search(viewModel.text());
         },
         listDataSource: x,
-        navigateToDelegate: function(e){
-            //console.log(e.itemData);
-            AppNamespace.app.navigate("delegate/" + e.itemData.id);
-            //showError('Network Error');
-        },
         showList: delegateListVisible
 
     };

@@ -16,7 +16,7 @@ function getDelegateByID    (query){
         for (var i = 0; i < data.length; i++) {
             //console.log(query === data[i].id);
             if(data[i].id === query){  //always use 3 equals
-                console.log("hello");
+                //console.log("hello");
                 delegate = data[i];
                 break;
             }
@@ -24,7 +24,7 @@ function getDelegateByID    (query){
 
     });
 
-    console.log(delegate);
+    //console.log(delegate);
 
     return delegate;
 }
@@ -33,7 +33,7 @@ function getDelegateByID    (query){
 AppNamespace.delegate = function(params){
     var delegate = getDelegateByID(params.delegate);
 
-    if(!delegate) console.log("Error Getting Delegate");
+    if(!delegate) alert("Error Getting Delegate");
 
     var viewModel = {
         name: delegate.name,

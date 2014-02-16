@@ -520,12 +520,24 @@ div.even {
 }
 
 
+/* uncategorized */
+
 .main-search{
     width:95%;
     border:1px solid #eaeaea;
     background: #fff!important;
     margin:10px auto!important;
     float:none!important;
+}
+
+
+.overlayContents{
+  padding: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 15px;
+  height: 150px;
+  background:#fff;
 }
 
 
