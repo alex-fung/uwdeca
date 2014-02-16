@@ -11,6 +11,10 @@
             <script type="text/javascript">
                 window.AppNamespace = {};
                 $(function () {
+                    DevExpress.devices.current({
+                        phone: true,
+                        platform: 'generic'
+                    });
                     AppNamespace.app = new DevExpress.framework.html.HtmlApplication(
                         { 
                             namespace: AppNamespace,
