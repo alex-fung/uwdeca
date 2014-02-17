@@ -19,6 +19,29 @@
                     DevExpress.ui.dialog.alert(error[errorName], errorName);
                 }
 
+
+                function parseTweet(text) {
+                    // Parse URIs
+                    text = text.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+/, function(uri) {
+                        return uri.link(uri);
+                         //return "<span class='blue'>" + uri + "</span>";
+                    });
+
+                    // Parse Twitter usernames
+                    text = text.replace(/[@]+[A-Za-z0-9-_]+/, function(u) {
+                        var username = u.replace("@","")
+                         return "<span class='blue'>" + u + "</span>";
+                        //return u.link("http://twitter.com/"+username);
+                    });
+                 
+                    // Parse Twitter hash tags
+                    text = text.replace(/[#]+[A-Za-z0-9-_]+/, function(t) {
+                        var tag = t.replace("#","%23")
+                        return "<span class='blue'>" + t + "</span>";
+                    });
+                        return text;
+
+                }
                 window.AppNamespace = {};
                 $(function () {
                     DevExpress.devices.current({
@@ -48,6 +71,11 @@
                                     title: "Schedule",
                                     action: "#schedule",
                                     icon: "Schedule" 
+                                },
+                                {
+                                    title: "News Updates",
+                                    action: "#stream",
+                                    icon: "Stream" 
                                 }
                             ],
                             navigationType: 'slideout'
@@ -102,6 +130,9 @@
             <link rel="dx-template" type="text/html" href="views/delegate.html"/>
             <!-- <link rel="stylesheet" type="text/css" href="views/delegate.css"/> -->
             <script type="text/javascript" src="views/delegate.js"></script>
+
+            <link rel="dx-template" type="text/html" href="views/stream.html"/>
+            <script type="text/javascript" src="views/stream.js"></script>
         </head>
         <body>
 

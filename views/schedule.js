@@ -1,4 +1,6 @@
 var x = new DevExpress.data.DataSource([]);
+
+//messy maybe change later
 var delegateListVisible = ko.observable(false);
 var passwordDialog = ko.observable(false);
 var selectedDelegate = undefined;
@@ -20,6 +22,7 @@ $.ajax({
         
 
         }).done( function (data) {
+                    console.log(data);
 
                     for (var i = 0; i < data.length; i++) {
                         x.store().insert(data[i]);
@@ -65,7 +68,6 @@ function navigateToDelegate(){
 
 AppNamespace.schedule = function(){
     var viewModel = {
-        lengthDescription: "Enter your email address...",
         text: ko.observable(""),
         test: function(){
             search(viewModel.text());

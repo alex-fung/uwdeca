@@ -1039,7 +1039,7 @@
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   -ms-text-overflow: ellipsis;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
   font-size: 18px;
   font-weight: normal;
   line-height: 1.3636;
