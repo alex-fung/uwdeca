@@ -22,11 +22,11 @@ $.ajax({
         
 
         }).done( function (data) {
-                    console.log(data);
 
                     for (var i = 0; i < data.length; i++) {
                         x.store().insert(data[i]);
                     }
+
 
                     //usefull if we want to group stuff, read docs for more info - dont need it right now
                     //x.group(function (dataItem) {
@@ -37,7 +37,9 @@ $.ajax({
 
 function search(query){
     x.searchValue(query);
+    x.pageIndex(0);
     x.load().done(function(){
+
         delegateListVisible(true);
     });
 }

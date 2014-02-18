@@ -544,6 +544,13 @@ div.even {
     color:#46AEEA;
 }
 
+.tweet-date{
+    font-style: italic;
+    font-size: small;
+    margin-top:5px;
+    text-decoration: underline;
+}
+
 /*
 
 Prbly wont use these
