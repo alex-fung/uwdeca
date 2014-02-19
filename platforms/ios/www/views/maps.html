@@ -1,0 +1,17 @@
+<div data-options="dxView: {name: 'maps', title: 'Maps'}">
+    <div data-options="dxContent: {targetPlaceholder: 'content'}">
+    	<div class="main">
+    		<div id="navBarContainer" data-bind="dxNavBar:{dataSource: navItems, itemClickAction: navItemClicked, selectedIndex: 0}">
+    		</div>
+    		<div id="map" data-bind="dxMap:{location:[43.470736, -80.542363], zoom: 15}"></div>
+    		<div id="locations" data-bind="dxButton: { clickAction: togglePopover, text: 'Select location' }" class="popover-button">
+    		</div>
+			<div data-bind="dxPopover: { width: 200, height: 'auto', visible: visible, target: '.popover-button'}">
+			    <div data-bind="dxList: { dataSource: markers, itemClickAction: locationItemClicked }">
+			    </div>
+			</div>
+			<div id="contents" data-bind="html: details">
+			</div>
+    	</div>
+    </div>
+</div>

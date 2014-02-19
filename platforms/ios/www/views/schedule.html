@@ -1,0 +1,34 @@
+<div data-options="dxView: {name: 'schedule', title: 'Schedule'}">
+  <div data-options="dxContent: {targetPlaceholder: 'content'}">
+  	
+		<div class="main" style="height:95%;">
+			<div class="dx-field-value main-search" data-bind="dxTextBox: { mode: 'search', placeholder: 'Enter your name....', valueUpdateAction: test, value: text, valueUpdateEvent: 'keyup'}"></div>  
+
+
+			<div id="delegate-list" style="margin: 10px;" data-bind="dxList: { dataSource: listDataSource, grouped: false, noDataText: 'No Results Found', itemClickAction: showPasswordDialog, visible: showList, height:'95%'}">
+				<div class="listItem" data-options="dxTemplate:{ name:'item' }">
+			  		
+				    <div style="display:inline-block; margin: 5px;">
+				    	<p style="font-size:larger;"><b data-bind="text: name"></b></p>
+				    </div>
+			  	</div>
+			</div>
+		  
+		  
+			<div id="delegate-password" data-bind="dxOverlay: { visible: passwordDialog }">
+			  <div class="overlayContents">
+			  	<p>Email Verification</p>
+			      <div class="dx-field-value main-search" data-bind="dxTextBox: { mode: 'email', placeholder: 'Enter your email address....', enterKeyAction: navigateToDelegate, value: email}"></div> 
+			      <div class="button" data-bind="dxButton: { text: 'Okiee Dokiee', clickAction: navigateToDelegate}"></div>
+			      <div class="button" data-bind="dxButton: { text: 'Nokiee Dokiee', clickAction: hidePasswordDialog }"></div>
+			  </div>
+			</div>
+ 
+
+		  <!--slideOut doesn't work yet-->
+		  <!-- <div id="slideOut" data-bind="dxSlideOut:{dataSource: items, selectedIndex: selectedIndex}"></div> -->
+
+		</div>	
+  </div>
+
+</div>

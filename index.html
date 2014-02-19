@@ -8,6 +8,8 @@
             <script type="text/javascript" src="js/knockout-3.0.0.js"></script>
             <script type="text/javascript" src="js/globalize.min.js"></script>
             <script type="text/javascript" src="js/dx.phonejs.js"></script>
+            <script type="text/javascript" src="phonegap.js"></script>
+            <script type="text/javascript" src="js/index.js"></script>
             <script type="text/javascript">
                 //error handeling
 
@@ -101,89 +103,92 @@
                         return "over a year ago";
                     }
                 }
-
                 window.AppNamespace = {};
-                $(function () {
-                    DevExpress.devices.current({
-                        phone: true,
-                        platform: 'generic'
-                    });
-                    AppNamespace.app = new DevExpress.framework.html.HtmlApplication(
-                        { 
-                            namespace: AppNamespace,
-                            navigation: [
-                                {
-                                    title: "Home",
-                                    action: "#main",
-                                    icon: "home"
-                                },
-                                {
-                                    title: "Workshops",
-                                    action: "#workshops",
-                                    icon: "workshops"
-                                },
-                                {
-                                    title: "Maps",
-                                    action: "#maps",
-                                    icon: "Maps" 
-                                },
-                                {
-                                    title: "Schedule",
-                                    action: "#schedule",
-                                    icon: "Schedule" 
-                                },
-                                {
-                                    title: "News Updates",
-                                    action: "#stream",
-                                    icon: "Stream" 
-                                }
-                            ],
-                            navigationType: 'slideout',
-                            commandMapping: {
-                                'generic-header-toolbar': {
-                                    defaults: {
-                                        'showIcon':true,
-                                        'align':'right'
+                document.addEventListener('deviceready', function(){
+
+                    
+                    //$(function () {
+                        DevExpress.devices.current({
+                            phone: true,
+                            platform: 'generic'
+                        });
+                        AppNamespace.app = new DevExpress.framework.html.HtmlApplication(
+                            { 
+                                namespace: AppNamespace,
+                                navigation: [
+                                    {
+                                        title: "Home",
+                                        action: "#main",
+                                        icon: "home"
                                     },
-                                    commands: [
-                                        {
-                                            id: 'myCommand',
-                                            icon:'plus'
-                                        },
-                                        {
-                                            id: 'send',
-                                            icon:'plus'
-                                        },
-                                        {
-                                            id: 'cancel',
-                                            icon:'close',
-                                            align:'left'
-                                        }
-                                    ]
-                                },
-                                'popup-toolbar': {
-                                    defaults: {
-                                        'showIcon':true,
-                                        'align':'right'
+                                    {
+                                        title: "Workshops",
+                                        action: "#workshops",
+                                        icon: "workshops"
                                     },
-                                    commands: [
-                                        {
-                                            id: 'send',
-                                            icon:'plus'
+                                    {
+                                        title: "Maps",
+                                        action: "#maps",
+                                        icon: "Maps" 
+                                    },
+                                    {
+                                        title: "Schedule",
+                                        action: "#schedule",
+                                        icon: "Schedule" 
+                                    },
+                                    {
+                                        title: "News Updates",
+                                        action: "#stream",
+                                        icon: "Stream" 
+                                    }
+                                ],
+                                navigationType: 'slideout',
+                                commandMapping: {
+                                    'generic-header-toolbar': {
+                                        defaults: {
+                                            'showIcon':true,
+                                            'align':'right'
                                         },
-                                        {
-                                            id: 'cancel',
-                                            icon:'close',
-                                            align:'left'
-                                        }
-                                    ]
+                                        commands: [
+                                            {
+                                                id: 'myCommand',
+                                                icon:'plus'
+                                            },
+                                            {
+                                                id: 'send',
+                                                icon:'plus'
+                                            },
+                                            {
+                                                id: 'cancel',
+                                                icon:'close',
+                                                align:'left'
+                                            }
+                                        ]
+                                    },
+                                    'popup-toolbar': {
+                                        defaults: {
+                                            'showIcon':true,
+                                            'align':'right'
+                                        },
+                                        commands: [
+                                            {
+                                                id: 'send',
+                                                icon:'plus'
+                                            },
+                                            {
+                                                id: 'cancel',
+                                                icon:'close',
+                                                align:'left'
+                                            }
+                                        ]
+                                    }
                                 }
                             }
-                        }
-                    );
-                    AppNamespace.app.router.register(":view/:delegate", { view: "main", delegate: undefined });
-                    AppNamespace.app.navigate();
-                });
+                        );
+                        AppNamespace.app.router.register(":view/:delegate", { view: "main", delegate: undefined });
+                        AppNamespace.app.navigate();
+                    //});
+                }, false);
             </script>
             <!--     
             <script type="text/javascript" src="js/localization/dx.phonejs.ja.js"></script>

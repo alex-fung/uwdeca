@@ -1,0 +1,39 @@
+.main{
+	height: 100%;
+/*    background-image:url("../images/background.png");*/
+}
+
+.content-div{
+    background-color:#fff;
+}
+
+.ignite-logo > img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 80px;
+    width: 286px;
+    margin-left: -145px;
+    margin-top: -200px;
+}
+
+.uwdeca-logo > img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 150px;
+    width: 150px;
+    margin-left: -77px;
+    margin-top: -50px;
+}
+
+/*.btn-info{
+	display: block;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    width: 150px;
+    margin-left: -97px;
+}*/

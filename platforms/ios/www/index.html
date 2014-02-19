@@ -1,0 +1,267 @@
+<!--HTML-->
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi" />
+            <title>Waterloo DECA</title>
+            <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+            <script type="text/javascript" src="js/knockout-3.0.0.js"></script>
+            <script type="text/javascript" src="js/globalize.min.js"></script>
+            <script type="text/javascript" src="js/dx.phonejs.js"></script>
+            <script type="text/javascript" src="phonegap.js"></script>
+            <script type="text/javascript">
+                //error handeling
+
+                var error = {
+                    'Network Error': "There was a network error. Please check your internet connection and reluanch the app."
+                };
+                
+                function showError(errorName){
+                    DevExpress.ui.dialog.alert(error[errorName], errorName);
+                }
+
+
+                function parseTweet(text) {
+                    // Parse URIs
+                    text = text.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+/g, function(uri) {
+                        return uri.link(uri);
+                         //return "<span class='blue'>" + uri + "</span>";
+                    });
+
+                    // Parse Twitter usernames
+                    text = text.replace(/[@]+[A-Za-z0-9-_]+/g, function(u) {
+                        var username = u.replace("@","")
+                         return "<span class='blue'>" + u + "</span>";
+                        //return u.link("http://twitter.com/"+username);
+                    });
+                 
+                    // Parse Twitter hash tags
+                    text = text.replace(/[#]+[A-Za-z0-9-_]+/g, function(t) {
+                        var tag = t.replace("#","%23")
+                        return "<span class='blue'>" + t + "</span>";
+                    });
+                    return text;
+
+                }
+
+                function relativeTime(dateString) {
+                    var rightNow = new Date();
+                    var then = new Date(dateString);
+                    
+                    /*if ($.browser.msie) {
+                        // IE can't parse these crazy Ruby dates
+                        then = Date.parse(dateString.replace(/( \+)/, ' UTC$1'));
+                    }*/
+
+                    var diff = rightNow - then;
+
+                    var second = 1000,
+                    minute = second * 60,
+                    hour = minute * 60,
+                    day = hour * 24,
+                    week = day * 7;
+
+                    if (isNaN(diff) || diff < 0) {
+                        return ""; // return blank string if unknown
+                    }
+
+                    if (diff < second * 2) {
+                        // within 2 seconds
+                        return "right now";
+                    }
+
+                    if (diff < minute) {
+                        return Math.floor(diff / second) + " seconds ago";
+                    }
+
+                    if (diff < minute * 2) {
+                        return "about 1 minute ago";
+                    }
+
+                    if (diff < hour) {
+                        return Math.floor(diff / minute) + " minutes ago";
+                    }
+
+                    if (diff < hour * 2) {
+                        return "about 1 hour ago";
+                    }
+
+                    if (diff < day) {
+                        return  Math.floor(diff / hour) + " hours ago";
+                    }
+
+                    if (diff > day && diff < day * 2) {
+                        return "yesterday";
+                    }
+
+                    if (diff < day * 365) {
+                        return Math.floor(diff / day) + " days ago";
+                    }
+
+                    else {
+                        return "over a year ago";
+                    }
+                }
+                window.AppNamespace = {};
+                document.addEventListener('deviceready', function(){
+
+                    
+                    //$(function () {
+                        DevExpress.devices.current({
+                            phone: true,
+                            platform: 'generic'
+                        });
+                        AppNamespace.app = new DevExpress.framework.html.HtmlApplication(
+                            { 
+                                namespace: AppNamespace,
+                                navigation: [
+                                    {
+                                        title: "Home",
+                                        action: "#main",
+                                        icon: "home"
+                                    },
+                                    {
+                                        title: "Workshops",
+                                        action: "#workshops",
+                                        icon: "workshops"
+                                    },
+                                    {
+                                        title: "Maps",
+                                        action: "#maps",
+                                        icon: "Maps" 
+                                    },
+                                    {
+                                        title: "Schedule",
+                                        action: "#schedule",
+                                        icon: "Schedule" 
+                                    },
+                                    {
+                                        title: "News Updates",
+                                        action: "#stream",
+                                        icon: "Stream" 
+                                    }
+                                ],
+                                navigationType: 'slideout',
+                                commandMapping: {
+                                    'generic-header-toolbar': {
+                                        defaults: {
+                                            'showIcon':true,
+                                            'align':'right'
+                                        },
+                                        commands: [
+                                            {
+                                                id: 'myCommand',
+                                                icon:'plus'
+                                            },
+                                            {
+                                                id: 'send',
+                                                icon:'plus'
+                                            },
+                                            {
+                                                id: 'cancel',
+                                                icon:'close',
+                                                align:'left'
+                                            }
+                                        ]
+                                    },
+                                    'popup-toolbar': {
+                                        defaults: {
+                                            'showIcon':true,
+                                            'align':'right'
+                                        },
+                                        commands: [
+                                            {
+                                                id: 'send',
+                                                icon:'plus'
+                                            },
+                                            {
+                                                id: 'cancel',
+                                                icon:'close',
+                                                align:'left'
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        );
+                        AppNamespace.app.router.register(":view/:delegate", { view: "main", delegate: undefined });
+                        AppNamespace.app.navigate();
+                    //});
+                }, false);
+            </script>
+            <!--     
+            <script type="text/javascript" src="js/localization/dx.phonejs.ja.js"></script>
+            -->
+            <link rel="stylesheet" type="text/css" href="index.css"/>
+            <link rel="stylesheet" type="text/css" href="css/dx.common.css" />
+            <link rel="stylesheet" type="text/css" href="css/dx.generic.light.css" />
+            
+
+            <!-- App -->
+            <!--<link rel="stylesheet" type="text/css" href="index.css" />
+            <script type="text/javascript" src="index.js"></script>    -->
+
+            <!-- Layouts  -->
+            <script type="text/javascript" src="layouts/SlideOut/SlideOutLayout.js"></script>
+            <link rel="stylesheet" type="text/css" href="layouts/SlideOut/SlideOutLayout.css" />
+            <link rel="dx-template" type="text/html" href="layouts/SlideOut/SlideOutLayout.html"/>
+
+            <!--<script type="text/javascript" src="layouts/Pivot/PivotLayout.js"></script>
+            <link rel="stylesheet" type="text/css" href="layouts/Pivot/PivotLayout.css" />
+            <link rel="dx-template" type="text/html" href="layouts/Pivot/PivotLayout.html"/>-->
+
+            <!-- App views -->
+            <link rel="dx-template" type="text/html" href="views/home.html"/>
+            <!-- <link rel="stylesheet" type="text/css" href="views/home.css"/> -->
+            <script type="text/javascript" src="views/home.js"></script>
+            
+            <link rel="dx-template" type="text/html" href="views/main.html"/>
+            <!-- <link rel="stylesheet" type="text/css" href="views/main.css"/> -->
+            <script type="text/javascript" src="views/main.js"></script>
+
+            <link rel="dx-template" type="text/html" href="views/maps.html"/>
+           <!--  <link rel="stylesheet" type="text/css" href="views/maps.css"/> -->
+            <script type="text/javascript" src="views/maps.js"></script>
+
+            <link rel="dx-template" type="text/html" href="views/schedule.html"/>
+           <!--  <link rel="stylesheet" type="text/css" href="views/schedule.css"/> -->
+            <script type="text/javascript" src="views/schedule.js"></script>
+
+            <link rel="dx-template" type="text/html" href="views/workshops.html"/>
+            <!-- <link rel="stylesheet" type="text/css" href="views/workshops.css"/> -->
+            <script type="text/javascript" src="views/workshops.js"></script>
+
+            <link rel="dx-template" type="text/html" href="views/delegate.html"/>
+            <!-- <link rel="stylesheet" type="text/css" href="views/delegate.css"/> -->
+            <script type="text/javascript" src="views/delegate.js"></script>
+
+            <link rel="dx-template" type="text/html" href="views/stream.html"/>
+            <link rel="stylesheet" type="text/css" href="views/stream.css"/>
+            <script type="text/javascript" src="views/stream.js"></script>
+        </head>
+        <body>
+
+            
+
+            <div class="dx-viewport"></div>
+
+<!-- 
+            <script type="text/javascript">
+                $(document).ready(function (){
+                    window.AppNamespace = {};
+                    $(function(){
+                        AppNamespace.app = new DevExpress.framework.html.HtmlApplication(
+                            { 
+                                namespace: AppNamespace
+                            });
+                        AppNamespace.app.router.register(":view", {view: "home"});
+                        AppNamespace.app.navigate();
+
+                    });
+                });
+
+            </script>
+             -->
+        </body>
+    </html>
