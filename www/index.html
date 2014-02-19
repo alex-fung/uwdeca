@@ -3,7 +3,6 @@
     <html>
         <head>
             <meta charset="utf-8" />
-            <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi" />
             <title>Waterloo DECA</title>
             <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
             <script type="text/javascript" src="js/knockout-3.0.0.js"></script>
@@ -16,12 +15,31 @@
                 var error = {
                     'Network Error': "There was a network error. Please check your internet connection and reluanch the app."
                 };
-                
+
                 function showError(errorName){
                     DevExpress.ui.dialog.alert(error[errorName], errorName);
                 }
 
+                function unFocus(){
+                    $('input').each(function(i, e){
+                        $(e).blur();
+                    });
+                }
 
+                function getSchedule(){
+                    var response = undefined;
+                    $.ajax({ 
+                        url:"http://syntaxdonors.org/uwdeca/schedule.json", 
+                        dataType: "json",
+                        async: false,
+                        error: function(jqXHR, textStatus, errorThrown){
+                            showError("Network Error");
+                            console.log(errorThrown);
+                        }}).done(function(data){
+                            response = data;
+                        });
+                    return response;
+                }
                 function parseTweet(text) {
                     // Parse URIs
                     text = text.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+/g, function(uri) {
@@ -43,6 +61,29 @@
                     });
                     return text;
 
+                }
+
+                function formatDate(date) {
+                    var d = new Date(date);
+                    var hh = d.getHours();
+                    var m = d.getMinutes();
+                    var s = d.getSeconds();
+                    var dd = "am";
+                    var h = hh;
+                    if (h >= 12) {
+                        h = hh-12;
+                        dd = "pm";
+                    }
+                    if (h == 0) {
+                        h = 12;
+                    }
+                    m = m<10?"0"+m:m;
+
+                    s = s<10?"0"+s:s;
+
+                    var repalcement = h+":"+m+dd;
+
+                    return repalcement;
                 }
 
                 function relativeTime(dateString) {
@@ -103,10 +144,12 @@
                         return "over a year ago";
                     }
                 }
+
                 window.AppNamespace = {};
                 document.addEventListener('deviceready', function(){
-
-                    
+                    if (device.platform == "iOS" && parseFloat(window.device.version) >= 7.0) {
+                        $('body').addClass('phonegap-ios-7');
+                    }
                     //$(function () {
                         DevExpress.devices.current({
                             phone: true,
@@ -132,8 +175,8 @@
                                         icon: "Maps" 
                                     },
                                     {
-                                        title: "Schedule",
-                                        action: "#schedule",
+                                        title: "Personal Schedule",
+                                        action: "#personal_schedule",
                                         icon: "Schedule" 
                                     },
                                     {
@@ -164,27 +207,14 @@
                                                 align:'left'
                                             }
                                         ]
-                                    },
-                                    'popup-toolbar': {
-                                        defaults: {
-                                            'showIcon':true,
-                                            'align':'right'
-                                        },
-                                        commands: [
-                                            {
-                                                id: 'send',
-                                                icon:'plus'
-                                            },
-                                            {
-                                                id: 'cancel',
-                                                icon:'close',
-                                                align:'left'
-                                            }
-                                        ]
                                     }
                                 }
                             }
                         );
+                        AppNamespace.app.navigating.add(function(e){
+                            //console.log(e.options);
+                           
+                        });
                         AppNamespace.app.router.register(":view/:delegate", { view: "main", delegate: undefined });
                         AppNamespace.app.navigate();
                     //});

@@ -1,8 +1,8 @@
-<div data-options="dxView: {name: 'schedule', title: 'Schedule'}">
+<div data-options="dxView: {name: 'personal_schedule', title: 'Personal Schedule'}">
   <div data-options="dxContent: {targetPlaceholder: 'content'}">
   	
 		<div class="main" style="height:95%;">
-			<div class="dx-field-value main-search" data-bind="dxTextBox: { mode: 'search', placeholder: 'Enter your name....', valueUpdateAction: test, value: text, valueUpdateEvent: 'keyup'}"></div>  
+			<div class="dx-field-value main-search" data-bind="dxTextBox: { mode: 'search', placeholder: 'Enter your name....', valueUpdateAction: test, value: text, valueUpdateEvent: 'keyup', focusInAction:focused, focusOutAction:focused}"></div>  
 
 
 			<div id="delegate-list" style="margin: 10px;" data-bind="dxList: { dataSource: listDataSource, grouped: false, noDataText: 'No Results Found', itemClickAction: showPasswordDialog, visible: showList, height:'95%'}">
@@ -18,9 +18,11 @@
 			<div id="delegate-password" data-bind="dxOverlay: { visible: passwordDialog }">
 			  <div class="overlayContents">
 			  	<p>Email Verification</p>
-			      <div class="dx-field-value main-search" data-bind="dxTextBox: { mode: 'email', placeholder: 'Enter your email address....', enterKeyAction: navigateToDelegate, value: email}"></div> 
-			      <div class="button" data-bind="dxButton: { text: 'Okiee Dokiee', clickAction: navigateToDelegate}"></div>
-			      <div class="button" data-bind="dxButton: { text: 'Nokiee Dokiee', clickAction: hidePasswordDialog }"></div>
+			      <div id="email-confirmation" class="dx-field-value main-search" data-bind="dxTextBox: { mode: 'email', placeholder: 'Enter your email address....', enterKeyAction: navigateToDelegate, value: email,  valueUpdateEvent: 'keyup'}"></div> 
+			      <div style="margin:0 auto;">
+				      <div class="button" style="display:inline-block; width:48%; margin-top: 15px; padding:6px 3px; box-sizing:border-box; margin-right:1%;" data-bind="dxButton: { text: 'Confirm', clickAction: navigateToDelegate}"></div>
+				      <div class="button dx-button-danger" style="box-sizing:border-box; display:inline-block; width:48%; margin-top: 15px; padding:6px 3px;" data-bind="dxButton: { text: 'Cancel', clickAction: hidePasswordDialog }"></div>
+				  </div>
 			  </div>
 			</div>
  

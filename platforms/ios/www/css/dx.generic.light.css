@@ -7,6 +7,20 @@
 * EULA: http://phonejs.devexpress.com/EULA
 */
 
+
+.dx-toast-error{
+  background:#E74C3C;
+}
+.dx-toast-error .dx-toast-icon{
+  background:url("../images/error.png") center no-repeat!important;
+  background-size: cover!important;
+  margin-right:20px!important;
+  margin-left:10px;
+}
+.dx-toast-success{
+  background:#1ABC9C;
+}
+
 .dx-theme-generic .dx-icon-plus
 {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAcElEQVRo3u3XIQ6AMAxA0fbQUzM1Uzv0sFgEYcD7uknzTJPmWiu+XAICAgICAgICAgK+FVhjXhk/L8uIiOoNEBAQEBAQEBAQEPA3wBrzsR+rektAQEcGEBAQEBAQEBAQEPB24O4BAgICAgICAgJu2wG3bCOgMHkN8wAAAABJRU5ErkJggg==) 0 0 no-repeat;
@@ -471,22 +485,18 @@
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  border: 1px solid #565d65;
   padding: 3px;
   color: #fff;
-  background-color: #6e7783;
-  background-repeat: no-repeat;
-  background-image: -webkit-linear-gradient(-90deg,#6e7783 0%,#4a5360 100%);
-  background-image: -moz-linear-gradient(-90deg,#6e7783 0%,#4a5360 100%);
-  background-image: -ms-linear-gradient(-90deg,#6e7783 0%,#4a5360 100%);
-  background-image: -o-linear-gradient(-90deg,#6e7783 0%,#4a5360 100%);
-  background-image: linear-gradient(180deg,#6e7783 0%,#4a5360 100%);
-  -webkit-box-shadow: inset 0 0 1px 0 #8d959f,0 2px 5px #d7d8d9;
-  -moz-box-shadow: inset 0 0 1px 0 #8d959f,0 2px 5px #d7d8d9;
-  -ms-box-shadow: inset 0 0 1px 0 #8d959f,0 2px 5px #d7d8d9;
-  -o-box-shadow: inset 0 0 1px 0 #8d959f,0 2px 5px #d7d8d9;
-  box-shadow: inset 0 0 1px 0 #8d959f,0 2px 5px #d7d8d9;
+  background-color: #1ABC9C;
 }
+
+.dx-theme-generic .dx-button.dx-button-success{
+  background: #1ABC9C;
+}
+.dx-theme-generic .dx-button.dx-button-danger{
+  background-color: #E74C3C;
+}
+.dx-t
 .dx-theme-generic .dx-button .dx-button-content
 {
   display: inline-block;
@@ -513,26 +523,15 @@
 }
 .dx-theme-generic .dx-button.dx-state-active
 {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -ms-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none;
-  background-color: #1e2d40;
-  background-repeat: no-repeat;
-  background-image: -webkit-linear-gradient(-90deg,#1e2d40 0%,#3e5265 100%);
-  background-image: -moz-linear-gradient(-90deg,#1e2d40 0%,#3e5265 100%);
-  background-image: -ms-linear-gradient(-90deg,#1e2d40 0%,#3e5265 100%);
-  background-image: -o-linear-gradient(-90deg,#1e2d40 0%,#3e5265 100%);
-  background-image: linear-gradient(180deg,#1e2d40 0%,#3e5265 100%);
+  background-color:#16A085;
 }
 .dx-theme-generic .dx-button.dx-state-active.dx-button-danger
 {
-  background: #c46660;
+  background: #C0392B;
 }
 .dx-theme-generic .dx-button.dx-state-active.dx-button-success
 {
-  background: #84b095;
+  background: #16A085;
 }
 .dx-theme-generic .dx-button.dx-button-back .dx-button-back-arrow
 {
@@ -990,7 +989,6 @@
 {
   width: 30px;
   height: 30px;
-  border: 3px solid #323a45;
 }
 .dx-theme-generic .dx-toolbar .dx-button.dx-state-active
 {
@@ -1127,13 +1125,12 @@
 }
 .dx-theme-generic .dx-toast-wrapper .dx-toast-content
 {
-  border: 1px solid #ccc;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  color: #323a45;
+  color: #fff;
 }
 .dx-theme-generic .dx-popup-wrapper .dx-overlay-content
 {

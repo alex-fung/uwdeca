@@ -40,6 +40,7 @@
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
 		DA9EAE9D983248E5B51585C0 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1A0E89FF14048B66691B5 /* CDVInAppBrowser.m */; };
+		F7803F22496B46AD96B25F23 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4D726B0FB4E9B9456716A /* CDVDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,8 @@
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "UWDECA Ignite Conference 2014/config.xml"; sourceTree = "<group>"; };
 		7EA1A0E89FF14048B66691B5 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVInAppBrowser.m"; path = "org.apache.cordova.inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		ED53AA79A37348C6829C39CB /* CDVInAppBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVInAppBrowser.h"; path = "org.apache.cordova.inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		2AE4D726B0FB4E9B9456716A /* CDVDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVDevice.m"; path = "org.apache.cordova.device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		3BC54FEACB6C4ACF9702CE44 /* CDVDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVDevice.h"; path = "org.apache.cordova.device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +226,8 @@
 			children = (
 				7EA1A0E89FF14048B66691B5 /* CDVInAppBrowser.m */,
 				ED53AA79A37348C6829C39CB /* CDVInAppBrowser.h */,
+				2AE4D726B0FB4E9B9456716A /* CDVDevice.m */,
+				3BC54FEACB6C4ACF9702CE44 /* CDVDevice.h */,
 			);
 			name = Plugins;
 			path = "UWDECA Ignite Conference 2014/Plugins";
@@ -409,6 +414,7 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				DA9EAE9D983248E5B51585C0 /* CDVInAppBrowser.m in Sources */,
+				F7803F22496B46AD96B25F23 /* CDVDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

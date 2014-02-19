@@ -533,11 +533,9 @@ div.even {
 
 .overlayContents{
   padding: 10px;
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 15px;
+  border-radius: 10px;
   height: 150px;
-  background:#fff;
+  background:#F3F3F3;
 }
 
 .blue{
@@ -549,6 +547,17 @@ div.even {
     font-size: small;
     margin-top:5px;
     text-decoration: underline;
+}
+
+/**
+** Only add the margin for phonegap apps on ios 7
+**/
+body.phonegap-ios-7{
+  margin-top: 20px;
+}
+
+.dx-editbox-input{
+    padding: 5px 8px!important;
 }
 
 /*

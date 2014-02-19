@@ -35,8 +35,8 @@ $.ajax({
         });
 
 
+
 function search(query){
-    $("#delegate-list").dxList("instance").option("height", window.innerHeight-100);
     x.searchValue(query);
     x.pageIndex(0);
     x.load().done(function(){
@@ -45,16 +45,19 @@ function search(query){
 }
 
 function showPasswordDialog(e){
+    unFocus();
     passwordDialog(true);
     selectedDelegate = e.itemData;
 }
 
 function hidePasswordDialog(){
+    unFocus();
     passwordDialog(false);
     selectedDelegate = undefined;
 }
 
 function navigateToDelegate(){
+    unFocus();
     if(email() === selectedDelegate.email){
         AppNamespace.app.navigate("delegate/" + selectedDelegate.id);
         selectedDelegate = undefined;
@@ -67,14 +70,19 @@ function navigateToDelegate(){
 }
 
 
-AppNamespace.schedule = function(){
+AppNamespace.personal_schedule = function(){
     var viewModel = {
         text: ko.observable(""),
         test: function(){
             search(viewModel.text());
         },
         listDataSource: x,
-        showList: delegateListVisible
+        showList: delegateListVisible,
+        focused: function(){
+            //console.log($("#delegate-list").dxList("instance"));
+            if(typeof $("#delegate-list").dxList("instance").option == 'function')  //Hack
+                $("#delegate-list").dxList("instance").option("height", window.innerHeight-100);
+        }
 
     };
 

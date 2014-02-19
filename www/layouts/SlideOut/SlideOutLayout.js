@@ -12,6 +12,7 @@
             var self = this;
             this.callBase(navigationCommands);
             this.$slideOut = $("<div/>").appendTo(this._$hiddenBag).dxSlideOut({menuItemTemplate: $("#slideOutMenuItemTemplate")}).dxCommandContainer({id: 'global-navigation'});
+            this.$slideOut.dxSlideOut("instance").option("swipeEnabled", false); //hack
             this.slideOut = this.$slideOut.dxSlideOut("instance");
             var container = this.$slideOut.dxCommandContainer("instance");
             this._commandManager._arrangeCommandsToContainers(navigationCommands, [container]);
@@ -100,6 +101,7 @@
             this._isNavigationVisible = false
         },
         _toggleNavigation: function($markup) {
+            unFocus();
             return this.slideOut.toggleMenuVisibility()
         }
     });

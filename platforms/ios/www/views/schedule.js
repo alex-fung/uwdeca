@@ -35,8 +35,8 @@ $.ajax({
         });
 
 
+
 function search(query){
-    $("#delegate-list").dxList("instance").option("height", window.innerHeight-100);
     x.searchValue(query);
     x.pageIndex(0);
     x.load().done(function(){
@@ -45,22 +45,25 @@ function search(query){
 }
 
 function showPasswordDialog(e){
+    unFocus();
     passwordDialog(true);
     selectedDelegate = e.itemData;
 }
 
 function hidePasswordDialog(){
+    unFocus();
     passwordDialog(false);
     selectedDelegate = undefined;
 }
 
 function navigateToDelegate(){
+    unFocus();
     if(email() === selectedDelegate.email){
         AppNamespace.app.navigate("delegate/" + selectedDelegate.id);
         selectedDelegate = undefined;
     }
     else{
-        DevExpress.ui.notify('Incorrect Email', 'error', 3000);
+        DevExpress.ui.notify('Incorrect Email', 'error', 100000);
     }
     email("");
 
@@ -74,7 +77,12 @@ AppNamespace.schedule = function(){
             search(viewModel.text());
         },
         listDataSource: x,
-        showList: delegateListVisible
+        showList: delegateListVisible,
+        focused: function(){
+            //console.log($("#delegate-list").dxList("instance"));
+            if(typeof $("#delegate-list").dxList("instance").option == 'function')  //Hack
+                $("#delegate-list").dxList("instance").option("height", window.innerHeight-100);
+        }
 
     };
 

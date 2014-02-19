@@ -1,21 +1,23 @@
-<div data-options="dxView: {name: 'main', title: 'Home'}">
+<div data-options="dxView: {name: 'main', title: 'Welcome!'}">
   <div data-options="dxContent: {targetPlaceholder: 'content'}">
   	
 		<div class="main">
 
-			<div class="twitter">
-		    	<img src="images/twitter.png">
-		  </div>
-		  <div class="twitter-logo">
-		      <img src="images/twitter-logo.png">
-		  </div>
-		  
-		  <div class="rest">
-			  <div class="btn btn-block btn-lg btn-inverse" data-bind="dxButton: { text: 'View Workshops', clickAction: viewWorkshops}">
-			  </div>  		
-			  <div class="btn btn-block btn-lg btn-info" data-bind="dxButton: { text: 'View Maps', clickAction: viewMaps}">
-			  </div>
-		  </div>
+			<div class="logo"></div>
+
+			<div data-bind="dxScrollView:{disabled:true}">
+				<div class="rightnow" style="margin:10px 0;">
+					<h3 style=" margin:0 auto 10px; width:95%; border-bottom:1px solid #5994BB; 	padding-bottom:5px;">Happening Right Now</h3>
+					<h1 style="margin-bottom:10px;" data-bind="text: eventTitle"></h1>
+					<p style="margin-bottom:5px;"><span style="font-size:smaller;">Location:</span> <span data-bind="html:eventLocation"></span></p>
+					<p><span style="font-size:smaller;">Timing:</span> <span data-bind="html:eventStart"></span> - <span data-bind="html:eventEnd"></span></p>
+					<div style="margin:20px auto; width:90%;" class="button orange" data-bind="dxButton:{text:'Update Information', clickAction:update}"></div>
+				</div>
+
+			</div>
+
+			<div class="footer"></div>
+
 		  <!--slideOut doesn't work yet-->
 		  <!-- <div id="slideOut" data-bind="dxSlideOut:{dataSource: items, selectedIndex: selectedIndex}"></div> -->
 

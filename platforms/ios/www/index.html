@@ -3,7 +3,6 @@
     <html>
         <head>
             <meta charset="utf-8" />
-            <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi" />
             <title>Waterloo DECA</title>
             <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
             <script type="text/javascript" src="js/knockout-3.0.0.js"></script>
@@ -16,9 +15,15 @@
                 var error = {
                     'Network Error': "There was a network error. Please check your internet connection and reluanch the app."
                 };
-                
+
                 function showError(errorName){
                     DevExpress.ui.dialog.alert(error[errorName], errorName);
+                }
+
+                function unFocus(){
+                    $('input').each(function(i, e){
+                        $(e).blur();
+                    });
                 }
 
 
@@ -103,10 +108,12 @@
                         return "over a year ago";
                     }
                 }
+
                 window.AppNamespace = {};
                 document.addEventListener('deviceready', function(){
-
-                    
+                    if (device.platform == "iOS" && parseFloat(window.device.version) >= 7.0) {
+                        $('body').addClass('phonegap-ios-7');
+                    }
                     //$(function () {
                         DevExpress.devices.current({
                             phone: true,
