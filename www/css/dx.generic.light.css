@@ -39,7 +39,7 @@
 }
 .dx-theme-generic .dx-icon-plus
 {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAcElEQVRo3u3XIQ6AMAxA0fbQUzM1Uzv0sFgEYcD7uknzTJPmWiu+XAICAgICAgICAgK+FVhjXhk/L8uIiOoNEBAQEBAQEBAQEPA3wBrzsR+rektAQEcGEBAQEBAQEBAQEPB24O4BAgICAgICAgJu2wG3bCOgMHkN8wAAAABJRU5ErkJggg==) 0 0 no-repeat;
+  background: url("../images/add.png") 0 0 no-repeat;
 }
 .dx-theme-generic .dx-icon-overflow
 {
@@ -183,7 +183,11 @@
 }
 .dx-theme-generic .dx-icon-menu
 {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAcElEQVRo3u3YsQ3AIAwEwHjoVGloqBjaWQGKCMXcD2Dpmn/JkZlX5QQgICAgICAgICAgICAgIGAlYOvjV/L23AF4FHD6cB+7Yd+WDCDgJqAWBTQTSgYQUIsC1p8JLwtAQEBAQEBAQEBAQEBAQEDA5bwl+uORmv8ivQAAAABJRU5ErkJggg==) 0 0 no-repeat;
+  background: url("../images/menu.png") 0 0 no-repeat;
+}
+.Welcome .dx-icon-menu
+{
+  background: url("../images/menu_black.png") 0 0 no-repeat;
 }
 .dx-theme-generic .dx-icon-money
 {
@@ -552,6 +556,17 @@
 .dx-theme-generic .dx-button.dx-button-back .dx-button-back-arrow
 {
   display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-top:3px!important;
+  border-top: 3px solid #333A44;
+border-left: 3px solid #333A44;
+-webkit-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+-ms-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+transform: rotate(-45deg);
+  /*display: inline-block;
   width: 25px;
   height: 36px;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAxCAYAAAAvFgI4AAABLklEQVRYw7XYrQrCUBjG8anFoLgLEBG8A6N91Wb3DszehzegYtVmGVi1GiyC0aCYzKK+JxwY42w7H88T/mMfB35jXwcWDUdJBK4uzaWrtJRiNNCQVtIvU8oGVA82oNqwgbc0YAIfaazGMYGJHksHfBEnwAdRwNoFcEW8ABfEG7BFggAbJBioQiBAGQIDihAoYELgQB6hAFmEBmSRBQvQSMIENLJjAhq5MwGNvHLIReqgkaPhcp2QkFrMCm48DFKLpnRmQnqlK91YUHajx4LyOyiQaSccKjoAhcoOwqCqARDI5kyCIdvrGgS5PCXekOsz7wX5vMHOkO/3yAkK+bpaQ6FzRRmkJsM2AqmC9lINNY+XQVPkb48i6ID+gWOCtmhET+Wp9JWeUp+B6GKppdb/zYOAiqrNPjIAAAAASUVORK5CYII=);
@@ -559,7 +574,7 @@
   -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center center;*/
 }
 .dx-theme-generic .dx-button.dx-button-back .dx-button-content
 {
@@ -987,7 +1002,7 @@
   background: none;
   box-shadow: none;
   color: #323a45;
-  padding: 2px 0 0;
+  padding: 2px 10px;
 }
 .dx-theme-generic .dx-toolbar .dx-button .dx-button-content
 {
@@ -1003,8 +1018,8 @@
 }
 .dx-theme-generic .dx-toolbar .dx-button .dx-icon
 {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 .dx-theme-generic .dx-toolbar .dx-button.dx-state-active
 {
@@ -1013,13 +1028,13 @@
 }
 .dx-theme-generic .dx-toolbar .dx-button.dx-state-active .dx-button-content
 {
-  background: #dbdcde;
+  background: rgba(0, 0, 0, .05);
   border-radius: 3px;
 }
 .dx-theme-generic .dx-toolbar .dx-button.dx-state-active.dx-button-back
 {
   border-radius: 3px;
-  background: #dbdcde;
+  background: rgba(0, 0, 0, .05);
 }
 .dx-theme-generic .dx-list
 {

@@ -1,10 +1,10 @@
 
-function getDelegateByID    (query){
+function getDelegateByID(query){
     var delegate = undefined;
 
     //needs to be synchronous request
     $.ajax({ 
-        url:"data/data.json", 
+        url:"http://syntaxdonors.org/uwdeca/data.json", 
         dataType: "json",
         async: false,
         error: function(jqXHR, textStatus, errorThrown){
@@ -16,7 +16,6 @@ function getDelegateByID    (query){
         for (var i = 0; i < data.length; i++) {
             //console.log(query === data[i].id);
             if(data[i].id === query){  //always use 3 equals
-                //console.log("hello");
                 delegate = data[i];
                 break;
             }
@@ -32,14 +31,18 @@ function getDelegateByID    (query){
 
 AppNamespace.delegate = function(params){
     var delegate = getDelegateByID(params.delegate);
-
     if(!delegate) alert("Error Getting Delegate");
+
+    
 
     var viewModel = {
         name: delegate.name,
-        workshop: delegate.workshop,
-        case1: delegate.case1,
-        case2: delegate.case2
+        wTime: delegate.workshopTime,
+        wLoc:delegate.workshopLocation,
+        c1Time:delegate.case1Time,
+        c2Time:delegate.case2Time,
+        c1Loc:delegate.case1Location,
+        c2Loc:delegate.case2Location
 
     };
 

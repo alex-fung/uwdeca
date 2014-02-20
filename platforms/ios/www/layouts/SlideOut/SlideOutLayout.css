@@ -44,7 +44,7 @@
 .slideout-layout .layout-frame,
 .slideout-layout .layout-frame .layout-header,
 .slideout-layout .layout-frame .layout-header .dx-toolbar {
-    border-radius: 4px 4px 0 0;
+    
 }
 
 
@@ -342,5 +342,5 @@
 }
 
 .dx-theme-generic .slideout-layout .layout-content {
-    top: 47px;
+    top: 46px;
 }

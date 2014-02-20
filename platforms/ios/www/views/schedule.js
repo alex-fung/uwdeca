@@ -63,14 +63,14 @@ function navigateToDelegate(){
         selectedDelegate = undefined;
     }
     else{
-        DevExpress.ui.notify('Incorrect Email', 'error', 100000);
+        DevExpress.ui.notify('Incorrect Email', 'error', 3000);
     }
     email("");
 
 }
 
 
-AppNamespace.schedule = function(){
+AppNamespace.personal_schedule = function(){
     var viewModel = {
         text: ko.observable(""),
         test: function(){

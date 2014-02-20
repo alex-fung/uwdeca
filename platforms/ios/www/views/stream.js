@@ -1,10 +1,13 @@
-var twitterFeed = new DevExpress.data.DataSource({store:[], load:getTwitterData});
+var twitterFeed = new DevExpress.data.DataSource({store:[], load:getTwitterData, pageSize:5});
 var tweetPopUp = ko.observable(false);
 var ref = undefined;
+var loadPanelVisible = ko.observable(false);
+var firstTime
 
 
 function getTwitterData(){
-
+    //console.log(options);
+    loadPanelVisible(true);
 
     return $.ajax({ 
         url:"http://syntaxdonors.org/uwdeca/twitter_workaround.php", 
@@ -21,12 +24,13 @@ function getTwitterData(){
                 data[i].created_at = relativeTime(data[i].created_at); 
                 //twitterFeed.store().insert(data[i]);
             }
+            loadPanelVisible(false);
             //twitterFeed.pageIndex(0);
             //$('#delegate-list').dxList('instance').endUpdate();
         });
 }
 
-getTwitterData();
+//getTwitterData();
 
 AppNamespace.stream = function(){
     var viewModel = {

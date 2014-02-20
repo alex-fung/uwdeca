@@ -13,13 +13,21 @@ module.exports = [
         "clobbers": [
             "device"
         ]
+    },
+    {
+        "file": "plugins/com.phonegap.plugin.statusbar/www/statusbar.js",
+        "id": "com.phonegap.plugin.statusbar.statusbar",
+        "clobbers": [
+            "window.StatusBar"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "org.apache.cordova.inappbrowser": "0.3.1",
-    "org.apache.cordova.device": "0.2.8"
+    "org.apache.cordova.device": "0.2.8",
+    "com.phonegap.plugin.statusbar": "1.0.1"
 }
 // BOTTOM OF METADATA
 });

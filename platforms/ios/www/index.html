@@ -26,7 +26,20 @@
                     });
                 }
 
-
+                function getSchedule(){
+                    var response = undefined;
+                    $.ajax({ 
+                        url:"http://syntaxdonors.org/uwdeca/schedule.json", 
+                        dataType: "json",
+                        async: false,
+                        error: function(jqXHR, textStatus, errorThrown){
+                            showError("Network Error");
+                            console.log(errorThrown);
+                        }}).done(function(data){
+                            response = data;
+                        });
+                    return response;
+                }
                 function parseTweet(text) {
                     // Parse URIs
                     text = text.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+/g, function(uri) {
@@ -48,6 +61,29 @@
                     });
                     return text;
 
+                }
+
+                function formatDate(date) {
+                    var d = new Date(date);
+                    var hh = d.getHours();
+                    var m = d.getMinutes();
+                    var s = d.getSeconds();
+                    var dd = "am";
+                    var h = hh;
+                    if (h >= 12) {
+                        h = hh-12;
+                        dd = "pm";
+                    }
+                    if (h == 0) {
+                        h = 12;
+                    }
+                    m = m<10?"0"+m:m;
+
+                    s = s<10?"0"+s:s;
+
+                    var repalcement = h+":"+m+dd;
+
+                    return repalcement;
                 }
 
                 function relativeTime(dateString) {
@@ -111,9 +147,9 @@
 
                 window.AppNamespace = {};
                 document.addEventListener('deviceready', function(){
-                    if (device.platform == "iOS" && parseFloat(window.device.version) >= 7.0) {
-                        $('body').addClass('phonegap-ios-7');
-                    }
+                    // if (device.platform == "iOS" && parseFloat(window.device.version) >= 7.0) {
+                    //     $('body').addClass('phonegap-ios-7');
+                    // }
                     //$(function () {
                         DevExpress.devices.current({
                             phone: true,
@@ -139,8 +175,8 @@
                                         icon: "Maps" 
                                     },
                                     {
-                                        title: "Schedule",
-                                        action: "#schedule",
+                                        title: "Personal Schedule",
+                                        action: "#personal_schedule",
                                         icon: "Schedule" 
                                     },
                                     {
@@ -171,29 +207,45 @@
                                                 align:'left'
                                             }
                                         ]
-                                    },
-                                    'popup-toolbar': {
-                                        defaults: {
-                                            'showIcon':true,
-                                            'align':'right'
-                                        },
-                                        commands: [
-                                            {
-                                                id: 'send',
-                                                icon:'plus'
-                                            },
-                                            {
-                                                id: 'cancel',
-                                                icon:'close',
-                                                align:'left'
-                                            }
-                                        ]
                                     }
                                 }
                             }
                         );
+                        AppNamespace.app.navigating.add(function(e){
+                            if(device.platform == "iOS" && parseFloat(window.device.version) >= 7.0){
+                                if (e.options.title === "Home"){
+                                    StatusBar.backgroundColorByHexString("#ffffff");
+                                    StatusBar.styleDefault();
+
+                                }
+                                if (e.options.title === "Maps"){
+                                        StatusBar.backgroundColorByHexString("#D54D53");
+                                        StatusBar.styleLightContent();
+                                }
+                                if (e.options.title === "Personal Schedule"){
+                                    StatusBar.backgroundColorByHexString("#E7A252");
+                                    StatusBar.styleLightContent();
+                                }
+                                if (e.options.title === "Conference Schedule"){
+                                        StatusBar.backgroundColorByHexString("#D54D53");
+                                        StatusBar.styleLightContent();
+                                }
+                                if (e.options.title === "News Updates"){
+                                        StatusBar.backgroundColorByHexString("#7C538B");
+                                        StatusBar.styleLightContent();
+                                }
+                                if (e.options.title === "Workshops"){
+                                        StatusBar.backgroundColorByHexString("#5792B9");
+                                        StatusBar.styleLightContent();
+                                }
+                                
+                            }
+                              
+                           
+                        });
                         AppNamespace.app.router.register(":view/:delegate", { view: "main", delegate: undefined });
                         AppNamespace.app.navigate();
+
                     //});
                 }, false);
             </script>

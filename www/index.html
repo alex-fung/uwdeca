@@ -147,9 +147,9 @@
 
                 window.AppNamespace = {};
                 document.addEventListener('deviceready', function(){
-                    if (device.platform == "iOS" && parseFloat(window.device.version) >= 7.0) {
-                        $('body').addClass('phonegap-ios-7');
-                    }
+                    // if (device.platform == "iOS" && parseFloat(window.device.version) >= 7.0) {
+                    //     $('body').addClass('phonegap-ios-7');
+                    // }
                     //$(function () {
                         DevExpress.devices.current({
                             phone: true,
@@ -212,11 +212,40 @@
                             }
                         );
                         AppNamespace.app.navigating.add(function(e){
-                            //console.log(e.options);
+                            if(device.platform == "iOS" && parseFloat(window.device.version) >= 7.0){
+                                if (e.options.title === "Home"){
+                                    StatusBar.backgroundColorByHexString("#ffffff");
+                                    StatusBar.styleDefault();
+
+                                }
+                                if (e.options.title === "Maps"){
+                                        StatusBar.backgroundColorByHexString("#D54D53");
+                                        StatusBar.styleLightContent();
+                                }
+                                if (e.options.title === "Personal Schedule"){
+                                    StatusBar.backgroundColorByHexString("#E7A252");
+                                    StatusBar.styleLightContent();
+                                }
+                                if (e.options.title === "Conference Schedule"){
+                                        StatusBar.backgroundColorByHexString("#D54D53");
+                                        StatusBar.styleLightContent();
+                                }
+                                if (e.options.title === "News Updates"){
+                                        StatusBar.backgroundColorByHexString("#7C538B");
+                                        StatusBar.styleLightContent();
+                                }
+                                if (e.options.title === "Workshops"){
+                                        StatusBar.backgroundColorByHexString("#5792B9");
+                                        StatusBar.styleLightContent();
+                                }
+                                
+                            }
+                              
                            
                         });
                         AppNamespace.app.router.register(":view/:delegate", { view: "main", delegate: undefined });
                         AppNamespace.app.navigate();
+
                     //});
                 }, false);
             </script>

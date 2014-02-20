@@ -41,6 +41,7 @@
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
 		DA9EAE9D983248E5B51585C0 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1A0E89FF14048B66691B5 /* CDVInAppBrowser.m */; };
 		F7803F22496B46AD96B25F23 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4D726B0FB4E9B9456716A /* CDVDevice.m */; };
+		792125F0FB7845AA9B590C75 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF7AACAD2D540C395AFBC73 /* CDVStatusBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,8 @@
 		ED53AA79A37348C6829C39CB /* CDVInAppBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVInAppBrowser.h"; path = "org.apache.cordova.inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		2AE4D726B0FB4E9B9456716A /* CDVDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVDevice.m"; path = "org.apache.cordova.device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		3BC54FEACB6C4ACF9702CE44 /* CDVDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVDevice.h"; path = "org.apache.cordova.device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		1DF7AACAD2D540C395AFBC73 /* CDVStatusBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVStatusBar.m"; path = "com.phonegap.plugin.statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		DD90BF41ACD54DEBAC359CC8 /* CDVStatusBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVStatusBar.h"; path = "com.phonegap.plugin.statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +231,8 @@
 				ED53AA79A37348C6829C39CB /* CDVInAppBrowser.h */,
 				2AE4D726B0FB4E9B9456716A /* CDVDevice.m */,
 				3BC54FEACB6C4ACF9702CE44 /* CDVDevice.h */,
+				1DF7AACAD2D540C395AFBC73 /* CDVStatusBar.m */,
+				DD90BF41ACD54DEBAC359CC8 /* CDVStatusBar.h */,
 			);
 			name = Plugins;
 			path = "UWDECA Ignite Conference 2014/Plugins";
@@ -415,6 +420,7 @@
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				DA9EAE9D983248E5B51585C0 /* CDVInAppBrowser.m in Sources */,
 				F7803F22496B46AD96B25F23 /* CDVDevice.m in Sources */,
+				792125F0FB7845AA9B590C75 /* CDVStatusBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,10 +15,10 @@ function getCurrentEvent(){
     return -1;
 
 }
-var showUpdate = false;
 
 AppNamespace.main = function(){
     var viewModel = {
+        showUpdate: false,
         eventTitle: ko.observable("No Current Event"),
         eventStart: ko.observable("N/A"),
         eventEnd: ko.observable("N/A"),
@@ -26,12 +26,12 @@ AppNamespace.main = function(){
         update: function(){
             var currentEvent = getCurrentEvent();
             var noEvent = (currentEvent === -1);
-            if(viewModel.eventTitle() === (noEvent)? "No Current Event": currentEvent.title && 
-                viewModel.eventStart() === (noEvent)? "N/A":formatDate(currentEvent.startTime) && 
-                viewModel.eventEnd() === (noEvent)? "N/A":formatDate(currentEvent.endTime) && 
-                viewModel.eventLocation() === (noEvent)? "N/A":currentEvent.location && showUpdate) {
-
+            if(viewModel.eventTitle() === ((noEvent)? "No Current Event": currentEvent.title) && 
+                viewModel.eventStart() === ((noEvent)? "N/A":formatDate(currentEvent.startTime)) && 
+                viewModel.eventEnd() === ((noEvent)? "N/A":formatDate(currentEvent.endTime)) && 
+                viewModel.eventLocation() === ((noEvent)? "N/A":currentEvent.location) && viewModel.showUpdate)  {
                 DevExpress.ui.notify('Updated', 'success', 1000);
+                viewModel.showUpdate = true;
                 return;
             }
 
@@ -39,7 +39,7 @@ AppNamespace.main = function(){
             viewModel.eventStart((noEvent)? "N/A":formatDate(currentEvent.startTime));
             viewModel.eventEnd((noEvent)? "N/A":formatDate(currentEvent.endTime));
             viewModel.eventLocation((noEvent)? "N/A":currentEvent.location);
-            showUpdate = true;
+            viewModel.showUpdate = true;
         }               
     };
     viewModel.update();

@@ -560,8 +560,12 @@ body.phonegap-ios-7{
     padding: 5px 8px!important;
 }
 
-.Home, .Maps, .Schedule, .Information{
+.dx-list-item.Home, .dx-list-item.Maps, .dx-list-item.Schedule, .dx-list-item.Information, .dx-list-item.News, .dx-list-item.Workshops{
     padding-left:.85em!important;
+}
+
+.main{
+    height:100%;
 }
 
 .logo{
@@ -584,14 +588,53 @@ body.phonegap-ios-7{
       background-color: #fff;
 }
 
+.delegate_section{
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,.45);
+      -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,.45);
+      -ms-box-shadow: 0px 0px 3px 0px rgba(0,0,0,.45);
+      -o-box-shadow: 0px 0px 3px 0px rgba(0,0,0,.45);
+      box-shadow: 0px 0px 3px 0px rgba(0,0,0,.45);
+      padding:10px 0 15px;
+      background-color: #fff;
+      margin:15px auto;
+      width:100%;
+}
 .footer{
     width: 100%;
-background: url("images/uwdeca-logo.png") center no-repeat;
-height: 43px;
-background-size: contain;
-margin: 5px auto;
-position: fixed;
-bottom:0;
+    background: url("images/uwdeca-logo.png") center no-repeat;
+    height: 43px;
+    background-size: contain;
+    position: absolute;
+    bottom:10px;
+}
+
+
+.dx-toolbar.Maps{
+    background-color:#D54D53!important;
+    color:#fff!important;
+    font-weight: light;
+}
+
+.dx-toolbar.Personal, .dx-toolbar.Delegate{
+    background-color:#E7A252!important;
+    color:#fff!important;
+    font-weight: light;
+}
+.dx-toolbar.News{
+    background-color:#7C538B!important;
+    color:#fff!important;
+    font-weight: light;
+}
+.dx-toolbar.Workshops{
+    background-color:#5792B9!important;
+    color:#fff!important;
+    font-weight: light;
+}
+
+.dx-theme-generic .dx-button.dx-button-back .dx-button-back-arrow
+{
+    border-top-color: #fff!important;
+    border-left-color:#fff!important;
 }
 
 /*
