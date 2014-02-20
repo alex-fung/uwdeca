@@ -620,6 +620,12 @@ body.phonegap-ios-7{
     color:#fff!important;
     font-weight: light;
 }
+.dx-toolbar.Conference{
+    background-color:#8AB84D!important;
+    color:#fff!important;
+    font-weight: light;
+}
+
 .dx-toolbar.News{
     background-color:#7C538B!important;
     color:#fff!important;
@@ -635,6 +641,11 @@ body.phonegap-ios-7{
 {
     border-top-color: #fff!important;
     border-left-color:#fff!important;
+}
+
+.conference_schedule_item{
+    border-bottom:none!important;
+    padding:0!important;
 }
 
 /*
