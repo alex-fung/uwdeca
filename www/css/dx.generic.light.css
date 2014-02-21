@@ -911,7 +911,6 @@ transform: rotate(-45deg);
 .dx-theme-generic .dx-tabs .dx-tab.dx-tab-selected .dx-tab-text
 {
   color: #323a45;
-  font-weight: 800;
 }
 .dx-theme-generic .dx-tabs .dx-tab.dx-state-disabled .dx-tab-text, .dx-theme-generic .dx-tabs .dx-tab.dx-state-disabled.dx-tab-selected .dx-tab-text
 {

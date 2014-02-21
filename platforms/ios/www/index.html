@@ -26,20 +26,7 @@
                     });
                 }
 
-                function getSchedule(){
-                    var response = undefined;
-                    $.ajax({ 
-                        url:"http://syntaxdonors.org/uwdeca/schedule.json", 
-                        dataType: "json",
-                        async: false,
-                        error: function(jqXHR, textStatus, errorThrown){
-                            showError("Network Error");
-                            console.log(errorThrown);
-                        }}).done(function(data){
-                            response = data;
-                        });
-                    return response;
-                }
+                
                 function parseTweet(text) {
                     // Parse URIs
                     text = text.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+/g, function(uri) {
@@ -175,6 +162,11 @@
                                         icon: "Maps" 
                                     },
                                     {
+                                        title: "Conference Schedule",
+                                        action: "#events",
+                                        icon: "events" 
+                                    },
+                                    {
                                         title: "Personal Schedule",
                                         action: "#personal_schedule",
                                         icon: "Schedule" 
@@ -298,6 +290,10 @@
             <link rel="dx-template" type="text/html" href="views/stream.html"/>
             <link rel="stylesheet" type="text/css" href="views/stream.css"/>
             <script type="text/javascript" src="views/stream.js"></script>
+            
+            <link rel="dx-template" type="text/html" href="views/events.html"/>
+            <!-- <link rel="stylesheet" type="text/css" href="views/events.css"/> -->
+            <script type="text/javascript" src="views/events.js"></script>
         </head>
         <body>
 

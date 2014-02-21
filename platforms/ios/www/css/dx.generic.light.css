@@ -861,7 +861,6 @@ transform: rotate(-45deg);
 }
 .dx-theme-generic .dx-tabs
 {
-  padding-top: 10px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -878,7 +877,7 @@ transform: rotate(-45deg);
 .dx-theme-generic .dx-tabs .dx-tab
 {
   border-left: 2px solid #3c444f;
-  padding: 8px;
+  padding: 10px 8px;
   height: 100%;
   display: table-cell;
   background-color: inherit;
@@ -1039,7 +1038,7 @@ transform: rotate(-45deg);
 .dx-theme-generic .dx-list
 {
   padding: 0 0;
-  padding-right: .85em;
+  /*padding-right: .85em;*/
 }
 .dx-theme-generic .dx-list .dx-scrollview-content
 {

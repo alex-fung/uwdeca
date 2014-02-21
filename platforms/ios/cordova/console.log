@@ -438,3 +438,12 @@ objc[13459]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.a
 2014-02-20 14:04:20.441 UWDECA Ignite Conference 2014[13459:80b] [CDVTimer][TotalPluginStartup] 2.976000ms
 2014-02-20 14:04:20.857 UWDECA Ignite Conference 2014[13459:80b] Resetting plugins due to page load.
 2014-02-20 14:04:21.588 UWDECA Ignite Conference 2014[13459:80b] Finished load of: file:///Users/shahmeernavid/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/11D1DF68-45EF-4599-9FD5-60C7EDB4C373/UWDECA%20Ignite%20Conference%202014.app/www/index.html
+objc[16851]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-02-20 21:23:14.575 UWDECA Ignite Conference 2014[16851:80b] Cannot find executable for CFBundle 0xa4b8500 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-02-20 21:23:14.644 UWDECA Ignite Conference 2014[16851:80b] Cannot find executable for CFBundle 0xa7b41b0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-02-20 21:23:14.745 UWDECA Ignite Conference 2014[16851:80b] Multi-tasking -> Device: YES, App: YES
+2014-02-20 21:23:14.782 UWDECA Ignite Conference 2014[16851:80b] Unlimited access to network resources
+2014-02-20 21:23:14.902 UWDECA Ignite Conference 2014[16851:80b] [CDVTimer][statusbar] 2.025008ms
+2014-02-20 21:23:14.903 UWDECA Ignite Conference 2014[16851:80b] [CDVTimer][TotalPluginStartup] 2.903998ms
+2014-02-20 21:23:15.257 UWDECA Ignite Conference 2014[16851:80b] Resetting plugins due to page load.
+2014-02-20 21:23:16.147 UWDECA Ignite Conference 2014[16851:80b] Finished load of: file:///Users/shahmeernavid/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/11D1DF68-45EF-4599-9FD5-60C7EDB4C373/UWDECA%20Ignite%20Conference%202014.app/www/index.html
