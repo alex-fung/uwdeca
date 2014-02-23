@@ -20,6 +20,20 @@ module.exports = [
         "clobbers": [
             "window.StatusBar"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.console/www/console-via-logger.js",
+        "id": "org.apache.cordova.console.console",
+        "clobbers": [
+            "console"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.console/www/logger.js",
+        "id": "org.apache.cordova.console.logger",
+        "clobbers": [
+            "cordova.logger"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -27,7 +41,8 @@ module.exports.metadata =
 {
     "org.apache.cordova.inappbrowser": "0.3.1",
     "org.apache.cordova.device": "0.2.8",
-    "com.phonegap.plugin.statusbar": "1.0.1"
+    "com.phonegap.plugin.statusbar": "1.0.1",
+    "org.apache.cordova.console": "0.2.7"
 }
 // BOTTOM OF METADATA
 });

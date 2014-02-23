@@ -447,3 +447,50 @@ objc[16851]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.a
 2014-02-20 21:23:14.903 UWDECA Ignite Conference 2014[16851:80b] [CDVTimer][TotalPluginStartup] 2.903998ms
 2014-02-20 21:23:15.257 UWDECA Ignite Conference 2014[16851:80b] Resetting plugins due to page load.
 2014-02-20 21:23:16.147 UWDECA Ignite Conference 2014[16851:80b] Finished load of: file:///Users/shahmeernavid/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/11D1DF68-45EF-4599-9FD5-60C7EDB4C373/UWDECA%20Ignite%20Conference%202014.app/www/index.html
+objc[26723]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-02-21 01:05:43.582 UWDECA Ignite Conference 2014[26723:80b] Cannot find executable for CFBundle 0xa7b53a0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-02-21 01:05:43.596 UWDECA Ignite Conference 2014[26723:80b] Cannot find executable for CFBundle 0xa7eb620 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-02-21 01:05:43.630 UWDECA Ignite Conference 2014[26723:80b] Multi-tasking -> Device: YES, App: YES
+2014-02-21 01:05:43.668 UWDECA Ignite Conference 2014[26723:80b] Unlimited access to network resources
+2014-02-21 01:05:43.801 UWDECA Ignite Conference 2014[26723:80b] [CDVTimer][statusbar] 1.760006ms
+2014-02-21 01:05:43.802 UWDECA Ignite Conference 2014[26723:80b] [CDVTimer][TotalPluginStartup] 2.370000ms
+2014-02-21 01:05:44.043 UWDECA Ignite Conference 2014[26723:80b] Resetting plugins due to page load.
+2014-02-21 01:05:45.086 UWDECA Ignite Conference 2014[26723:80b] Finished load of: file:///Users/shahmeernavid/Library/Application%20Support/iPhone%20Simulator/7.0-64/Applications/F66904FB-D6F2-4D6F-B9D7-EF263FB9878A/UWDECA%20Ignite%20Conference%202014.app/www/index.html
+objc[28287]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-02-21 01:08:11.219 UWDECA Ignite Conference 2014[28287:80b] Cannot find executable for CFBundle 0xa53a640 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-02-21 01:08:11.236 UWDECA Ignite Conference 2014[28287:80b] Cannot find executable for CFBundle 0xa64cd90 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-02-21 01:08:11.288 UWDECA Ignite Conference 2014[28287:80b] Multi-tasking -> Device: YES, App: YES
+2014-02-21 01:08:11.294 UWDECA Ignite Conference 2014[28287:80b] Unlimited access to network resources
+2014-02-21 01:08:11.319 UWDECA Ignite Conference 2014[28287:80b] [CDVTimer][statusbar] 0.817001ms
+2014-02-21 01:08:11.320 UWDECA Ignite Conference 2014[28287:80b] [CDVTimer][TotalPluginStartup] 1.372039ms
+2014-02-21 01:08:11.497 UWDECA Ignite Conference 2014[28287:80b] Resetting plugins due to page load.
+2014-02-21 01:08:12.020 UWDECA Ignite Conference 2014[28287:80b] Finished load of: file:///Users/shahmeernavid/Library/Application%20Support/iPhone%20Simulator/7.0-64/Applications/F66904FB-D6F2-4D6F-B9D7-EF263FB9878A/UWDECA%20Ignite%20Conference%202014.app/www/index.html
+objc[31407]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-02-21 01:11:17.184 UWDECA Ignite Conference 2014[31407:80b] Cannot find executable for CFBundle 0xa56c730 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-02-21 01:11:17.201 UWDECA Ignite Conference 2014[31407:80b] Cannot find executable for CFBundle 0xa63d6e0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-02-21 01:11:17.265 UWDECA Ignite Conference 2014[31407:80b] Multi-tasking -> Device: YES, App: YES
+2014-02-21 01:11:17.284 UWDECA Ignite Conference 2014[31407:80b] Unlimited access to network resources
+2014-02-21 01:11:17.311 UWDECA Ignite Conference 2014[31407:80b] [CDVTimer][statusbar] 1.308024ms
+2014-02-21 01:11:17.312 UWDECA Ignite Conference 2014[31407:80b] [CDVTimer][TotalPluginStartup] 2.354980ms
+2014-02-21 01:11:17.541 UWDECA Ignite Conference 2014[31407:80b] Resetting plugins due to page load.
+2014-02-21 01:11:18.135 UWDECA Ignite Conference 2014[31407:80b] Finished load of: file:///Users/shahmeernavid/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/11D1DF68-45EF-4599-9FD5-60C7EDB4C373/UWDECA%20Ignite%20Conference%202014.app/www/index.html
+2014-02-21 03:36:24.133 UWDECA Ignite Conference 2014[31407:80b] THREAD WARNING: ['StatusBar'] took '34.027100' ms. Plugin should use a background thread.
+2014-02-21 03:40:29.015 UWDECA Ignite Conference 2014[31407:80b] Received memory warning.
+objc[34975]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-02-21 03:42:53.345 UWDECA Ignite Conference 2014[34975:80b] Cannot find executable for CFBundle 0xa7e45c0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-02-21 03:42:53.366 UWDECA Ignite Conference 2014[34975:80b] Cannot find executable for CFBundle 0xa74e030 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-02-21 03:42:53.407 UWDECA Ignite Conference 2014[34975:80b] Multi-tasking -> Device: YES, App: YES
+2014-02-21 03:42:53.418 UWDECA Ignite Conference 2014[34975:80b] Unlimited access to network resources
+2014-02-21 03:42:53.455 UWDECA Ignite Conference 2014[34975:80b] [CDVTimer][statusbar] 0.750005ms
+2014-02-21 03:42:53.455 UWDECA Ignite Conference 2014[34975:80b] [CDVTimer][TotalPluginStartup] 1.383007ms
+2014-02-21 03:42:53.642 UWDECA Ignite Conference 2014[34975:80b] Resetting plugins due to page load.
+2014-02-21 03:42:54.206 UWDECA Ignite Conference 2014[34975:80b] Finished load of: file:///Users/shahmeernavid/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/11D1DF68-45EF-4599-9FD5-60C7EDB4C373/UWDECA%20Ignite%20Conference%202014.app/www/index.html
+objc[38692]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-02-21 04:09:12.568 UWDECA Ignite Conference 2014[38692:80b] Cannot find executable for CFBundle 0xa498d50 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-02-21 04:09:12.589 UWDECA Ignite Conference 2014[38692:80b] Cannot find executable for CFBundle 0xa4c3cf0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-02-21 04:09:12.641 UWDECA Ignite Conference 2014[38692:80b] Multi-tasking -> Device: YES, App: YES
+2014-02-21 04:09:12.677 UWDECA Ignite Conference 2014[38692:80b] Unlimited access to network resources
+2014-02-21 04:09:12.776 UWDECA Ignite Conference 2014[38692:80b] [CDVTimer][statusbar] 1.806021ms
+2014-02-21 04:09:12.777 UWDECA Ignite Conference 2014[38692:80b] [CDVTimer][TotalPluginStartup] 2.331018ms
+2014-02-21 04:09:13.149 UWDECA Ignite Conference 2014[38692:80b] Resetting plugins due to page load.
+2014-02-21 04:09:13.714 UWDECA Ignite Conference 2014[38692:80b] Finished load of: file:///Users/shahmeernavid/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/11D1DF68-45EF-4599-9FD5-60C7EDB4C373/UWDECA%20Ignite%20Conference%202014.app/www/index.html
