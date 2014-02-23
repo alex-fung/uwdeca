@@ -3,15 +3,22 @@
     	<div class="main">
     		<div id="navBarContainer" data-bind="dxNavBar:{dataSource: navItems, itemClickAction: navItemClicked, selectedIndex: 0}">
     		</div>
-    		<div id="map" data-bind="dxMap:{location:[43.470736, -80.542363], zoom: 15}"></div>
+    		<div id="map" data-bind="dxMap:{location:[43.470736, -80.542363], zoom: 15, width: 'auto', height: '60%'}"></div>
     		<div id="locations" data-bind="dxButton: { clickAction: togglePopover, text: 'Select location' }" class="popover-button">
     		</div>
-			<div data-bind="dxPopover: { width: 200, height: 'auto', visible: visible, target: '.popover-button'}">
-			    <div data-bind="dxList: { dataSource: markers, itemClickAction: locationItemClicked }">
+			<div id="popup" data-bind="dxPopover: { width: 200, height: 'auto', visible: visible, target: '.popover-button'}">
+			    <div id="list" data-bind="dxList: { dataSource: markers, itemClickAction: markerItemClicked }">
 			    </div>
 			</div>
 			<div id="contents" data-bind="html: details">
 			</div>
+			<div id="dropdown" class="dx-field-value" data-bind="dxSelectBox: {
+		        dataSource: floors,
+		        displayExpr: 'text',
+		        valueExpr: 'floor',
+		        value: 1,
+		        valueChangeAction: changeFloor
+		    }"></div>
     	</div>
     </div>
 </div>
