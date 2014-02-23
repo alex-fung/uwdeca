@@ -206,9 +206,6 @@
                             }
                         );
                         AppNamespace.app.navigating.add(function(e){
-                            $('.main').each(function(i, e){
-                                                                        console.log($(e).height());
-                                                                        });
                             if(device.platform == "iOS" && parseFloat(window.device.version) >= 7.0){
 
                                 if (e.options.title === "Home"){
@@ -278,7 +275,7 @@
             <script type="text/javascript" src="views/main.js"></script>
 
             <link rel="dx-template" type="text/html" href="views/maps.html"/>
-           <!--  <link rel="stylesheet" type="text/css" href="views/maps.css"/> -->
+            <link rel="stylesheet" type="text/css" href="views/maps.css"/>
             <script type="text/javascript" src="views/maps.js"></script>
 
             <link rel="dx-template" type="text/html" href="views/schedule.html"/>
