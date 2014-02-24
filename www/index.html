@@ -153,11 +153,16 @@
                                         action: "#main",
                                         icon: "home"
                                     },
-                                    // {
-                                    //     title: "Workshops",
-                                    //     action: "#workshops",
-                                    //     icon: "workshops"
-                                    // },
+                                    {
+                                        title: "Workshops",
+                                        action: "#workshops",
+                                        icon: "workshops"
+                                    },
+                                    {
+                                        title: "Speakers",
+                                        action: "#speakers",
+                                        icon: "speakers"
+                                    },
                                     {
                                         title: "Maps",
                                         action: "#maps",
@@ -177,6 +182,11 @@
                                         title: "News Updates",
                                         action: "#stream",
                                         icon: "Stream" 
+                                    },
+                                    {
+                                        title: "Sponsors",
+                                        action: "#sponsors",
+                                        icon: "sponsors" 
                                     }
                                 ],
                                 navigationType: 'slideout',
@@ -213,24 +223,32 @@
                                     StatusBar.styleDefault();
 
                                 }
-                                if (e.options.title === "Maps"){
+                                else if (e.options.title === "Maps"){
                                         StatusBar.backgroundColorByHexString("#D54D53");
                                         StatusBar.styleLightContent();
                                 }
-                                if (e.options.title === "Personal Schedule"){
+                                else if (e.options.title === "Personal Schedule"){
                                     StatusBar.backgroundColorByHexString("#E7A252");
                                     StatusBar.styleLightContent();
                                 }
-                                if (e.options.title === "Conference Schedule"){
+                                else if (e.options.title === "Conference Schedule"){
                                         StatusBar.backgroundColorByHexString("#8AB84D");
                                         StatusBar.styleLightContent();
                                 }
-                                if (e.options.title === "News Updates"){
+                                else if (e.options.title === "News Updates"){
                                         StatusBar.backgroundColorByHexString("#7C538B");
                                         StatusBar.styleLightContent();
                                 }
-                                if (e.options.title === "Workshops"){
+                                else if (e.options.title === "Sponsors"){
                                         StatusBar.backgroundColorByHexString("#5792B9");
+                                        StatusBar.styleLightContent();
+                                }
+                                else if (e.options.title === "Workshops"){
+                                        StatusBar.backgroundColorByHexString("#5792B9");
+                                        StatusBar.styleLightContent();
+                                }
+                                else if (e.options.title === "Speakers"){
+                                        StatusBar.backgroundColorByHexString("#8AB84D");
                                         StatusBar.styleLightContent();
                                 }
                                 
@@ -297,6 +315,11 @@
             <link rel="dx-template" type="text/html" href="views/events.html"/>
             <!-- <link rel="stylesheet" type="text/css" href="views/events.css"/> -->
             <script type="text/javascript" src="views/events.js"></script>
+
+            <link rel="dx-template" type="text/html" href="views/sponsors.html"/>
+            <script type="text/javascript" src="views/sponsors.js"></script>
+            <link rel="dx-template" type="text/html" href="views/speakers.html"/>
+            <script type="text/javascript" src="views/speakers.js"></script>
         </head>
         <body>
 

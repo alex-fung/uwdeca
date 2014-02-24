@@ -524,3 +524,6 @@ objc[76993]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.a
 2014-02-23 02:18:15.610 UWDECA Ignite Conference 2014[76993:80b] Resetting plugins due to page load.
 2014-02-23 02:18:16.128 UWDECA Ignite Conference 2014[76993:80b] Finished load of: file:///Users/shahmeernavid/Library/Application%20Support/iPhone%20Simulator/7.0/Applications/96F790A0-D23E-44DC-A67B-7E9B0600B4C3/UWDECA%20Ignite%20Conference%202014.app/www/index.html
 2014-02-23 02:18:16.184 UWDECA Ignite Conference 2014[76993:80b] 480
+2014-02-23 11:30:52.845 UWDECA Ignite Conference 2014[76993:80b] THREAD WARNING: ['StatusBar'] took '15.814941' ms. Plugin should use a background thread.
+2014-02-23 18:35:58.814 UWDECA Ignite Conference 2014[76993:80b] THREAD WARNING: ['StatusBar'] took '12.598145' ms. Plugin should use a background thread.
+2014-02-23 18:38:56.979 UWDECA Ignite Conference 2014[76993:80b] THREAD WARNING: ['InAppBrowser'] took '217.947998' ms. Plugin should use a background thread.
