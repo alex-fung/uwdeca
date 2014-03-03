@@ -1,0 +1,36 @@
+<div data-options="dxView: {name: 'personal_schedule', title: 'Personal Schedule'}">
+  <div data-options="dxContent: {targetPlaceholder: 'content'}">
+  	
+		<div class="main" style="width:100%;">
+			<div class="dx-field-value main-search" data-bind="dxTextBox: { mode: 'search', placeholder: 'Enter your name....', valueUpdateAction: test, value: text, valueUpdateEvent: 'keyup', focusInAction:focused, focusOutAction:focused}"></div>  
+
+
+			<div id="delegate-list" style="margin: 10px;" data-bind="dxList: { dataSource: listDataSource, grouped: false, noDataText: 'No Results Found', itemClickAction: showPasswordDialog, visible: showList, height:'95%'}">
+				<div class="listItem" data-options="dxTemplate:{ name:'item' }">
+			  		
+				    <div style="display:inline-block; margin: 5px;">
+				    	<p style="font-size:larger;"><b data-bind="text: name"></b></p>
+				    </div>
+			  	</div>
+			</div>
+		  
+		  
+			<div id="delegate-password" data-bind="dxOverlay: { visible: passwordDialog }">
+			  <div class="overlayContents">
+			  	<p>Email Verification</p>
+			      <div id="email-confirmation" class="dx-field-value main-search" data-bind="dxTextBox: { mode: 'email', placeholder: 'Enter your email address....', enterKeyAction: navigateToDelegate, value: email,  valueUpdateEvent: 'keyup'}"></div> 
+			      <div style="margin:0 auto;">
+				      <div class="button" style="display:inline-block; width:48%; margin-top: 15px; padding:6px 3px; box-sizing:border-box; margin-right:1%;" data-bind="dxButton: { text: 'Confirm', clickAction: navigateToDelegate}"></div>
+				      <div class="button dx-button-danger" style="box-sizing:border-box; display:inline-block; width:48%; margin-top: 15px; padding:6px 3px;" data-bind="dxButton: { text: 'Cancel', clickAction: hidePasswordDialog }"></div>
+				  </div>
+			  </div>
+			</div>
+ 
+
+		  <!--slideOut doesn't work yet-->
+		  <!-- <div id="slideOut" data-bind="dxSlideOut:{dataSource: items, selectedIndex: selectedIndex}"></div> -->
+
+		</div>	
+  </div>
+
+</div>
