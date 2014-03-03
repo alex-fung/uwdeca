@@ -15,7 +15,7 @@ function getDelegateByID(query){
         }).done(function (data) {   
         for (var i = 0; i < data.length; i++) {
             //console.log(query === data[i].id);
-            if(data[i].id === query){  //always use 3 equals
+            if(data[i].id == query){  //always use 3 equals
                 delegate = data[i];
                 break;
             }
@@ -39,6 +39,8 @@ AppNamespace.delegate = function(params){
         name: delegate.name,
         wTime: delegate.workshopTime,
         wLoc:delegate.workshopLocation,
+        wTime2: delegate.workshop2Time,
+        wLoc2:delegate.workshop2Location,
         c1Time:delegate.case1Time,
         c2Time:delegate.case2Time,
         c1Loc:delegate.case1Location,
