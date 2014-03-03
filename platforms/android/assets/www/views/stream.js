@@ -36,7 +36,7 @@ AppNamespace.stream = function(){
     var viewModel = {
         listDataSource: twitterFeed,
         tweet: function(){
-            ref = window.open('https://twitter.com/share?hashtags=ignite2014,UWDECA&related=uwdeca', '_blank', 'location=yes')
+            ref = window.open('https://twitter.com/intent/tweet?hashtags=ignite2014&related=uwdeca&screen_name=uwdeca', '_blank', 'location=yes')
         }
     };
 
