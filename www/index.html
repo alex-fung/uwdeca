@@ -5,11 +5,16 @@
             <meta charset="utf-8" />
              <meta name="viewport" content="minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no" />
             <title>Waterloo DECA</title>
+            <meta name="description" content="A short description of this webpage">
+            <link rel="kik-icon" href="images/kik-icon.png">
+            <link rel="canonical" href="http://uwdeca.com/">
+         
+            <script src="http://cdn.kik.com/kik/1.0.0/kik.js"></script>
             <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
             <script type="text/javascript" src="js/knockout-3.0.0.js"></script>
             <script type="text/javascript" src="js/globalize.min.js"></script>
             <script type="text/javascript" src="js/dx.phonejs.js"></script>
-            <script type="text/javascript" src="phonegap.js"></script>
+            <!-- <script type="text/javascript" src="phonegap.js"></script>-->
             <script type="text/javascript">
                 //error handeling
 
@@ -216,41 +221,41 @@
                             }
                         );
                         AppNamespace.app.navigating.add(function(e){
-                            if(device.platform == "iOS" && parseFloat(window.device.version) >= 7.0){
+                            // if(device.platform == "iOS" && parseFloat(window.device.version) >= 7.0){
 
-                                if (e.options.title === "Home"){
-                                    StatusBar.backgroundColorByHexString("#ffffff");
-                                    StatusBar.styleDefault();
+                            //     if (e.options.title === "Home"){
+                            //         StatusBar.backgroundColorByHexString("#ffffff");
+                            //         StatusBar.styleDefault();
 
-                                }
-                                else if (e.options.title === "Maps"){
-                                        StatusBar.backgroundColorByHexString("#D54D53");
-                                        StatusBar.styleLightContent();
-                                }
-                                else if (e.options.title === "Personal Schedule"){
-                                    StatusBar.backgroundColorByHexString("#E7A252");
-                                    StatusBar.styleLightContent();
-                                }
-                                else if (e.options.title === "Conference Schedule"){
-                                        StatusBar.backgroundColorByHexString("#8AB84D");
-                                        StatusBar.styleLightContent();
-                                }
-                                else if (e.options.title === "News Updates"){
-                                        StatusBar.backgroundColorByHexString("#7C538B");
-                                        StatusBar.styleLightContent();
-                                }
-                                else if (e.options.title === "Sponsors"){
-                                        StatusBar.backgroundColorByHexString("#5792B9");
-                                        StatusBar.styleLightContent();
-                                }
-                                else if (e.options.title === "Workshops"){
-                                        StatusBar.backgroundColorByHexString("#5792B9");
-                                        StatusBar.styleLightContent();
-                                }
-                                else if (e.options.title === "Speakers"){
-                                        StatusBar.backgroundColorByHexString("#8AB84D");
-                                        StatusBar.styleLightContent();
-                                }
+                            //     }
+                            //     else if (e.options.title === "Maps"){
+                            //             StatusBar.backgroundColorByHexString("#D54D53");
+                            //             StatusBar.styleLightContent();
+                            //     }
+                            //     else if (e.options.title === "Personal Schedule"){
+                            //         StatusBar.backgroundColorByHexString("#E7A252");
+                            //         StatusBar.styleLightContent();
+                            //     }
+                            //     else if (e.options.title === "Conference Schedule"){
+                            //             StatusBar.backgroundColorByHexString("#8AB84D");
+                            //             StatusBar.styleLightContent();
+                            //     }
+                            //     else if (e.options.title === "News Updates"){
+                            //             StatusBar.backgroundColorByHexString("#7C538B");
+                            //             StatusBar.styleLightContent();
+                            //     }
+                            //     else if (e.options.title === "Sponsors"){
+                            //             StatusBar.backgroundColorByHexString("#5792B9");
+                            //             StatusBar.styleLightContent();
+                            //     }
+                            //     else if (e.options.title === "Workshops"){
+                            //             StatusBar.backgroundColorByHexString("#5792B9");
+                            //             StatusBar.styleLightContent();
+                            //     }
+                            //     else if (e.options.title === "Speakers"){
+                            //             StatusBar.backgroundColorByHexString("#8AB84D");
+                            //             StatusBar.styleLightContent();
+                            //     }
                                 
                             }
                               
